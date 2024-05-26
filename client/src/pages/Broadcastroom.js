@@ -241,13 +241,7 @@ const Broadcastroom = () => {
 
     //configuration for webrtc ice servers
 
-    const configuration = {
-        iceServers: [
-            { urls: "stun:stun.l.google.com:19302" },
-            { urls: "turn:numb.viagenie.ca", credential: "muazkh", username: "webrtc@live.com" },
-            { urls: "turn:numb.viagenie.ca", credential: "1234567890", username: "leapkk58@gmail.com" },
-        ],
-    };
+    const configuration={iceServers:[{urls:"stun:stun.relay.metered.ca:80"},{urls:"turn:global.relay.metered.ca:80",username:"18b276faacb994b93513310e",credential:"+4HEzwpdswuCUj2X"},{urls:"turn:global.relay.metered.ca:80?transport=tcp",username:"18b276faacb994b93513310e",credential:"+4HEzwpdswuCUj2X"},{urls:"turns:global.relay.metered.ca:443",username:"18b276faacb994b93513310e",credential:"+4HEzwpdswuCUj2X"},{urls:"turns:global.relay.metered.ca:443?transport=tcp",username:"18b276faacb994b93513310e",credential:"+4HEzwpdswuCUj2X"}]};
 
     const { Socket, setSocket } = React.useContext(SocketContext);
     const [disconnected, setDisconnected] = useState(null);
